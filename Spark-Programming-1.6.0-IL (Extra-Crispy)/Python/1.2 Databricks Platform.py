@@ -1,4 +1,8 @@
 # Databricks notebook source
+# This is a comment
+
+# COMMAND ----------
+
 # MAGIC 
 # MAGIC %md-sandbox
 # MAGIC <div style="text-align: center; line-height: 0; padding-top: 9px;">
