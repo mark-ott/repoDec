@@ -1,5 +1,4 @@
 # Databricks notebook source
-# MAGIC 
 # MAGIC %md-sandbox
 # MAGIC <div style="text-align: center; line-height: 0; padding-top: 9px;">
 # MAGIC   <img src="https://databricks.com/wp-content/uploads/2018/03/db-academy-rgb-1200px.png" alt="Databricks Learning" style="width: 400px">
@@ -14,7 +13,7 @@
 # MAGIC 3. Extract from timestamp
 # MAGIC 4. Convert to date
 # MAGIC 5. Manipulate datetimes
-# MAGIC 
+# MAGIC
 # MAGIC ##### Methods
 # MAGIC - Column (<a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.Column.html#pyspark.sql.Column" target="_blank">Python</a>/<a href="http://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/Column.html" target="_blank">Scala</a>): `cast`
 # MAGIC - Built-In Functions (<a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql.html?#functions" target="_blank">Python</a>/<a href="http://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/functions$.html" target="_blank">Scala</a>): `date_format`, `to_date`, `date_add`, `year`, `month`, `dayofweek`, `minute`, `second`
@@ -26,7 +25,7 @@
 # COMMAND ----------
 
 from pyspark.sql.functions import col
-
+# This is a comment
 df = spark.read.parquet(eventsPath)
 display(df)
 
@@ -79,7 +78,7 @@ display(timestampDF)
 # MAGIC %md
 # MAGIC #### `date_format()`  
 # MAGIC Converts a date/timestamp/string to a string formatted with the given date time pattern.
-# MAGIC 
+# MAGIC
 # MAGIC See valid date and time format patterns for <a href="https://spark.apache.org/docs/latest/sql-ref-datetime-pattern.html" target="_blank">Spark 3</a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" target="_blank">Spark 2</a>.
 
 # COMMAND ----------
@@ -107,7 +106,7 @@ display(formattedDF)
 # MAGIC %md
 # MAGIC #### `year`
 # MAGIC Extracts the year as an integer from a given date/timestamp/string.
-# MAGIC 
+# MAGIC
 # MAGIC ##### Similar methods: `month`, `dayofweek`, `minute`, `second`, etc.
 
 # COMMAND ----------
