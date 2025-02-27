@@ -1,5 +1,4 @@
 # Databricks notebook source
-# MAGIC 
 # MAGIC %md-sandbox
 # MAGIC <div style="text-align: center; line-height: 0; padding-top: 9px;">
 # MAGIC   <img src="https://databricks.com/wp-content/uploads/2018/03/db-academy-rgb-1200px.png" alt="Databricks Learning" style="width: 400px">
@@ -9,11 +8,11 @@
 
 # MAGIC %md
 # MAGIC # Aggregation
-# MAGIC 
+# MAGIC
 # MAGIC 1. Grouping data
 # MAGIC 1. Grouped data methods
 # MAGIC 1. Built-in aggregate functions
-# MAGIC 
+# MAGIC
 # MAGIC ##### Methods
 # MAGIC - DataFrame (<a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.html" target="_blank">Python</a>/<a href="http://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/Dataset.html" target="_blank">Scala</a>): `groupBy`
 # MAGIC - Grouped Data (<a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.GroupedData.html#pyspark.sql.GroupedData" target="_blank" target="_blank">Python</a>/<a href="http://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/RelationalGroupedDataset.html" target="_blank">Scala</a>): `agg`, `avg`, `count`, `max`, `sum`
@@ -36,13 +35,14 @@ display(df)
 # COMMAND ----------
 
 df.explain(mode = "CODEGEN")
+df.explain(mode = "CODEGEN")
 
 # COMMAND ----------
 
 # MAGIC %md
 # MAGIC ### ![Spark Logo Tiny](https://files.training.databricks.com/images/105/logo_spark_tiny.png) Grouping data
 # MAGIC Use the DataFrame `groupBy` method to create a grouped data object
-# MAGIC 
+# MAGIC
 # MAGIC This grouped data object is called `RelationalGroupedDataset` in Scala and `GroupedData` in Python
 
 # COMMAND ----------
@@ -89,7 +89,7 @@ display(cityPurchaseQuantitiesDF)
 # MAGIC %md
 # MAGIC ### ![Spark Logo Tiny](https://files.training.databricks.com/images/105/logo_spark_tiny.png) Built-in aggregate functions
 # MAGIC Use the grouped data method `agg` to apply built-in aggregate functions
-# MAGIC 
+# MAGIC
 # MAGIC This allows you to apply other transformations on the resulting columns, such as `alias`
 
 # COMMAND ----------
@@ -123,7 +123,7 @@ display(stateAggregatesDF)
 # MAGIC 1. Aggregate revenue by traffic source
 # MAGIC 2. Get top 3 traffic sources by total revenue
 # MAGIC 3. Clean revenue columns to have two decimal places
-# MAGIC 
+# MAGIC
 # MAGIC ##### Methods
 # MAGIC - <a href="http://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/Dataset.html" target="_blank">DataFrame</a>: groupBy, sort, limit
 # MAGIC - <a href="http://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/Column.html" target="_blank">Column</a>: alias, desc, cast, operators
@@ -154,7 +154,7 @@ display(df)
 # MAGIC - Group by **`traffic_source`**
 # MAGIC - Get sum of **`revenue`** as **`total_rev`**
 # MAGIC - Get average of **`revenue`** as **`avg_rev`**
-# MAGIC 
+# MAGIC
 # MAGIC Remember to import any necessary built-in functions.
 
 # COMMAND ----------
